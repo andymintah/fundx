@@ -1,0 +1,1 @@
+<?php /**PATH /Applications/MAMP/htdocs/fundx/resources/views/profile/baindex.blade.php ENDPATH**/ ?>

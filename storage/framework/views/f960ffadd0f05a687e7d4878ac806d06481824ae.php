@@ -1,0 +1,127 @@
+<?php $__env->startSection('content'); ?>
+<div class="row">
+<div class="col-md-9 col-lg-9 col-sm-9 pull-left">
+
+
+<div class="container">
+<!-- Example row of columns -->
+<div class="row">
+
+  <div class="col-md-12 col-lg-12 col-sm-12">
+  <form method="post" action="<?php echo e(action('DonationController@store')); ?>" method="POST", enctype = "multipart/form-data">
+  <?php echo e(csrf_field()); ?>
+
+  <input type="hidden" name="_method" value="post">
+  
+  <div class="form-group">
+    <input class="form-control" id="donation-name"  name="name" required aria-describedby="donationname" placeholder="Donation Name" />
+    
+  </div>
+
+
+  <div class="form-group">
+    <textarea class="form-control autosize-target text-left"  id="donation-description" name="description"  placeholder="Description"></textarea>
+  </div>
+
+
+  <div class="form-row">
+ 
+ 
+  <div class="form-group col">
+
+  <input class="form-control" id="datepicker" width="276" name="start-date" required aria-describedby="startdate" placeholder="Start Date"/>
+</div>
+
+<div class="form-group  col">
+
+  <input class="form-control" id="datepicker1" width="276" name="end-date" required aria-describedby="enddate"  placeholder="End Date"/>
+</div>
+
+       <!-- <div class="form-group col">
+
+            <input class="form-control" id="days"  name="days" required aria-describedby="enddate" placeholder="Days" />
+         </div>-->
+
+    </div>
+    <div class="form-group">
+
+<input class="form-control" id="items" name="items" required aria-describedby="items"  placeholder="Items"/>
+</div>
+
+<div class="form-group">
+
+<input class="form-control" id="address" name="address" required aria-describedby="address"  placeholder="Item Delivery Address"/>
+</div>
+<div class="form-row">
+
+        <div class="form-group col">
+    <input class="form-control"  id="amount"  name="amount"  required aria-describedby="amount"  placeholder="Target Amount" />
+        </div>
+
+        <div class="form-group col">
+          <select class="form-control " id="category" name="category" placeholder="Category">
+      <option selected>Donation Category</option>
+
+      <option>1</option>
+
+    </select>
+  </div>
+
+
+
+      <div class="form-group col">
+          <div class="custom-file">
+               <input type="file" class="custom-file-input" id="imgurl" name="imgurl">
+              <label class="custom-file-label" for="customFile">Header Image</label>
+           </div>
+      </div>
+
+</div>
+
+
+
+
+  <div class="form-group">
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+
+  </div>
+
+</form>
+   
+  
+
+
+</div>
+
+<div class="col-md-3 col-lg-3 col-sm-3 pull-right">
+          <!--<div class="p-3 mb-3 bg-light rounded">
+            <h4 class="font-italic">About</h4>
+            <p class="mb-0">Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
+          </div>-->
+
+          <div class="p-3">
+            <h4 class="font-italic">Actions</h4>
+            <ol class="list-unstyled">
+              <li><a href="/donation/">My donation</a></li>
+
+            </ol>
+          </div>
+
+          <!--<div class="p-3">
+            <h4 class="font-italic">Members</h4>
+            <ol class="list-unstyled mb-0">
+              <li><a href="#">March 2014</a></li>
+     
+            </ol>
+          </div>-->
+
+       
+        </div><!-- /.blog-sidebar -->
+</div>
+</div>
+
+
+
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.app', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH /Applications/MAMP/htdocs/fundx/resources/views/donation/create.blade.php ENDPATH**/ ?>
