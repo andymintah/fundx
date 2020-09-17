@@ -12,7 +12,7 @@
  <p class="lead">{{$donation->description}}</p>
  <a class="btn btn-lg btn-primary" href="/donation/{{ $donation->id }}/edit" role="button">Edit</a>
  <a class="btn btn-lg btn-primary" href="/donation/{{ $donation->id }}" role="button">Delete</a>
- <a class="btn btn-lg btn-primary" href="/donation/{{ $donation->id }}" role="button">View More</a>
+ <a class="btn btn-lg btn-primary" href="/donation/mshow/{{ $donation->id }}" role="button">View More</a>
 
 </div>
 </div>

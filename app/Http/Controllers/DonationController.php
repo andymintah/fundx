@@ -108,6 +108,18 @@ class DonationController extends Controller
 
         return view('donation.show',['donation'=>$donation]);
     }
+    public function mshow(Donation $donation)
+    {
+        if (auth::check()){
+            $donation = Donation::find($donation->id);
+
+        return view('donation.mshow',['donation'=>$donation]);
+        }
+        return view ('auth.login');
+            
+
+        
+    }
 
     public function edit(Company $company)
     {

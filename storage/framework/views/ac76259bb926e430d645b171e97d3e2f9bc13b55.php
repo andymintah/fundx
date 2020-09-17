@@ -10,7 +10,7 @@
  <p class="lead"><?php echo e($donation->description); ?></p>
  <a class="btn btn-lg btn-primary" href="/donation/<?php echo e($donation->id); ?>/edit" role="button">Edit</a>
  <a class="btn btn-lg btn-primary" href="/donation/<?php echo e($donation->id); ?>" role="button">Delete</a>
- <a class="btn btn-lg btn-primary" href="/donation/<?php echo e($donation->id); ?>" role="button">View More</a>
+ <a class="btn btn-lg btn-primary" href="/donation/mshow/<?php echo e($donation->id); ?>" role="button">View More</a>
 
 </div>
 </div>

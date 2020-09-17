@@ -27,7 +27,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/profile/baindex">
+                <a class="nav-link" href="/userprofile/show/{{Auth::user()->id}}">
                   <span data-feather="file"></span>
                   Personal Information
                 </a>

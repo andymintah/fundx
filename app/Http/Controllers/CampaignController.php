@@ -114,7 +114,7 @@ class CampaignController extends Controller
 
         return view('campaign.mshow',['campaign'=>$campaign]);
         }
-        return ('auth.login');
+        return view('auth.login');
             
 
         
