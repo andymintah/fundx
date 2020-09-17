@@ -34,9 +34,12 @@ Route::resource('profile','UserProfileController');
 Route::resource('donation','DonationController');
 
 Route::resource('donors','DonorsController');
+Route::resource('campaignpayout','CampaignPayoutController');
+
 Route::resource('donationdonors','DonationDonorController');
 
 Route::resource('users','UsersController');
+Route::get('/campaignpayout/create/{id}', 'CampaignPayoutController@create');
 
 Route::get('/donors/create/{id}', 'DonorsController@create');
 Route::get('/donationdonors/create/{id}', 'DonationDonorController@create');

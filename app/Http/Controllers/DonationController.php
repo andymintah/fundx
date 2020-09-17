@@ -88,6 +88,19 @@ class DonationController extends Controller
  
     }
 
+ 
+
+    public function withdrawamount($donation_id, $amount){
+
+        $amountUpdate = Donation::where('id',$donation_id)->where ('withdrawable_balance','>=', $amount)->
+            update([
+                'withdrawn_amount' => DB::raw('withdrawn_amount +' .$amount)
+                ]);
+
+            
+
+    }
+
 
     public function show(Donation $donation)
     {

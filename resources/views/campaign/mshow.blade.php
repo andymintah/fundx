@@ -11,7 +11,7 @@
 <img class="thumbnail" height=200px src={{   asset('storage/campaignimages/'.$campaign->imgurl)   }} alt="{{$campaign->cmpname}}"/>
 
   <h1 class="display-3">{{$campaign->cmpname }}</h1>
-  <a class="btn btn-sm btn-info" href="/campaign/withdraw" >Withdraw</a>
+  <a class="btn btn-sm btn-info" href="/campaignpayout/create/{{$campaign->id }}" >Withdraw</a>
 
 </div>
 </div>

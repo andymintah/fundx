@@ -32,4 +32,7 @@ class Campaign extends Model
     public function donors (){
         return $this->hasMany('App\Donors');
     }
+    public function campaignpayout (){
+        return $this->hasMany('App\CampaignPayout');
+    }
 }
