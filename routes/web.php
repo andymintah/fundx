@@ -21,9 +21,10 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::get('/campaign/mshow/{campaign}', 'CampaignController@mshow');
+Route::get('/campaign/withdraw/', 'CampaignController@withdraw');
 
 Route::get('/campaign/mindex', 'CampaignController@mindex');
-Route::get('/campaign/mshow/{id}', 'CampaignController@mshow');
 
 Route::get('/donation/mindex', 'DonationController@mindex');
 

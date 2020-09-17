@@ -23,9 +23,10 @@ class Campaign extends Migration
             $table->double('amount', 13, 2); 
             $table->string('category');
             $table->double('raised_amount', 13, 2)->default('0');  
-            $table->double('balance_amount', 13, 2)->storedAs('amount-raised_amount'); 
+            $table->double('target_balance', 13, 2)->storedAs('amount-raised_amount'); 
             $table->double('withdrawn_amount', 13, 2)->default('0'); 
-            $table->double('withdraw_balance', 13, 2)->storedAs('amount-withdrawn_amount'); 
+            $table->double('withdrawable_balance', 13, 2)->storedAs('raised_amount-withdrawn_amount'); 
+
             $table->string('status')->nullable(); 
 
     

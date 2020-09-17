@@ -44,7 +44,7 @@
     <div class="card">
       <div class="card-body">
         <p class="card-title">Balance</p>
-        <p class="card-text">{{$campaign->balance_amount}}</p>
+        <p class="card-text">{{$campaign->target_balance}}</p>
       </div>
     </div>
   </div>

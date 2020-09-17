@@ -43,13 +43,16 @@ class CampaignController extends Controller
 
     public function withdrawamount($campaign_id, $amount){
 
-        $amountUpdate = Campaign::where('id',$campaign_id)->
+        $amountUpdate = Campaign::where('id',$campaign_id)->where ('withdrawable_balance','>=', $amount)->
             update([
                 'withdrawn_amount' => DB::raw('withdrawn_amount +' .$amount)
                 ]);
 
             
- 
+
+    }
+    public function withdraw(){
+        return view('campaign.withdraw');
     }
     public function create()
     {
@@ -106,12 +109,14 @@ class CampaignController extends Controller
 
     public function mshow(Campaign $campaign)
     {
-        if (Auth::check()){
+        if (auth::check()){
             $campaign = Campaign::find($campaign->id);
 
-        return view('campaign.show',['campaign'=>$campaign]);
+        return view('campaign.mshow',['campaign'=>$campaign]);
         }
-        return view('auth.login');
+        return ('auth.login');
+            
+
         
     }
 

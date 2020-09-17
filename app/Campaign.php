@@ -15,9 +15,9 @@ class Campaign extends Model
         'amount',
         'category'.
         'raised_amount',
-        'balance_amount',
+        'target_balance',
         'withdrawn_amount',
-        'withdraw_balance',
+        'withdrawable_balance',
         'status',
         'user_id'
 
@@ -25,12 +25,10 @@ class Campaign extends Model
 
 
     public function user(){
-        return $this->belongsTo('App\User');
+        return $this->belongsTo('App\User'::class);
     }  
 
-    public function campaignaccount (){
-        return $this->hasOne('App\CampaignAccount');
-    }
+
     public function donors (){
         return $this->hasMany('App\Donors');
     }
