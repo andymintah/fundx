@@ -13,8 +13,10 @@ class UserProfileController extends Controller
     public function index()
     {
  
-        $userprofile = UserProfile::all();
-        return view('userprofile.index',['userprofile'=> $userprofile]); 
+       
+        $userprofile = UserProfile::where('user_id', Auth::user()->id)->get();
+
+        return view('profile.index',['userprofile'=>$userprofile]);
 
  
     }
@@ -27,6 +29,11 @@ class UserProfileController extends Controller
     }
 
 
+    public function show(){
+        $userprofile = UserProfile::where('user_id', Auth::user()->id)->get();
+
+        return view('profile.index',['userprofile'=>$userprofile]);
+    }
 
     public function store(Request $request)
     {
@@ -72,31 +79,12 @@ class UserProfileController extends Controller
 
 
 
-    public function show(UserProfile $userprofile)
-    {
-        $userprofile = UserProfile::find($userprofile->id);
-
-        return view('userprofile.show',['userprofile'=>$userprofile]);
-    }
-
-    public function mshow(UserProfile $userprofile)
-    {
-        if (auth::check()){
-            $userprofile = UserProfile::find($userprofile->id);
-
-        return view('userprofile.mshow',['userprofile'=>$userprofile]);
-        }
-        return ('auth.login');
-            
-
-        
-    }
-
+  
     public function edit(UserProfile $userprofile)
     {
         $userprofile = UserProfile::find($userprofile->id);
 
-        return view('userprofile.edit',['userprofile'=>$userprofile]);
+        return view('profile.edit',['userprofile'=>$userprofile]);
 
     } 
 
@@ -118,7 +106,7 @@ class UserProfileController extends Controller
 
         ]);
     if($userprofileUpdate){
-        return redirect()->route('userprofile.show',['userprofile'=>$userprofile->id])
+        return redirect()->route('profile.show',['userprofile'=>$userprofile->id])
         ->with('success','UserProfile Updated Successfully');
     }
         return back()->withInput();
@@ -129,7 +117,7 @@ class UserProfileController extends Controller
     {
         $findUserProfile = UserProfile::find($userprofile->id);
         if($findUserProfile->delete()){
-            return redirect()->route('userprofile.index')
+            return redirect()->route('profile.index')
             ->with('success','UserProfile deleted Successfully');
 
         }

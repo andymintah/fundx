@@ -97,10 +97,7 @@
 </div>
 
 <div class="col-md-3 col-lg-3 col-sm-3 pull-right">
-          <!--<div class="p-3 mb-3 bg-light rounded">
-            <h4 class="font-italic">About</h4>
-            <p class="mb-0">Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
-          </div>-->
+
 
           <div class="p-3">
             <h4 class="font-italic">Actions</h4>
@@ -110,13 +107,6 @@
             </ol>
           </div>
 
-          <!--<div class="p-3">
-            <h4 class="font-italic">Members</h4>
-            <ol class="list-unstyled mb-0">
-              <li><a href="#">March 2014</a></li>
-     
-            </ol>
-          </div>-->
 
        
         </div><!-- /.blog-sidebar -->

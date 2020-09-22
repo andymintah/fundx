@@ -65,7 +65,7 @@
                             <?php endif; ?>
                         <?php else: ?>
                             <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="/profile"role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="/profile/dashboard"role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     My Profile <span class="caret"></span>
                                 </a>
 

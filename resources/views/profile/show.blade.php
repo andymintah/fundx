@@ -6,28 +6,26 @@
 <div class="col-md-9 col-lg-9 col-sm-9 pull-left">
 <div class="jumbotron">
 <div class="container">
-<img class="thumbnail" height=200px src={{   asset('storage/donationimages/'.$donation->imgurl)   }} alt="{{$donation->cmpname}}"/>
+<img class="thumbnail" height=200px src={{   asset('storage/userprofileimages/'.$userprofile->dpurl)   }} alt="{{$userprofile->firstname}}"/>
 
-  <h3 class="display-6">{{$donation->dntname }}</h3>
-  <button type="button" class="btn btn-sm btn-info"><a href="/donationdonors/create/{{ $donation->id }}" style="text-decoration: none">Donate</a></button>
+  <h3 class="display-6">Welcome, {{$userprofile->firstname }}</h3>
+  <button type="button" class="btn btn-sm btn-info"><a href="/userprofiledonors/create/{{ $userprofile->id }}" style="text-decoration: none">Donate</a></button>
 
 </div>
 </div>
 <h5>Details</h5>
 
-<p>{{$donation->description}}</p>
+<p>{{$userprofile->firstname}}  {{$userprofile->othername}}   {{$userprofile->lastname}}  </p>
 <hr/>
-<h5>Amount to Raise</h5>
-<p>{{$donation->amount}}</p>
+<p>{{$userprofile->email}}</p>
+<hr/>
+<p>{{$userprofile->contactno1}}</p><br/>
+<p>{{$userprofile->contactno2}}</p><br/>
+<p>{{$userprofile->contactno3}}</p>
+
 <hr/>
 
-<h5>Start Date</h5>
-<p>{{$donation->start_date}}</p>
-<hr/>
 
-<h5>End Date</h5>
-<p>{{$donation->end_date}}</p>
-<hr/>
 
 
 </div>

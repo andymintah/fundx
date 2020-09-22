@@ -13,7 +13,7 @@ class UserProfile extends Migration
      */
     public function up()
     {
-        Schema::create('user_profile', function (Blueprint $table) {
+        Schema::create('user_profiles', function (Blueprint $table) {
             $table->bigIncrements('id')->unsigned()->index();
             $table->string('lastname');
             $table->string('firstname');
@@ -29,11 +29,10 @@ class UserProfile extends Migration
             $table->unsignedbigInteger('role_id')->nullable();
             $table->timestamps();
         });
-        Schema::table('user_profile', function (Blueprint $table) {
+        Schema::table('user_profiles', function (Blueprint $table) {
            
             $table->foreign('user_id')->references('id')->on('users');          
                 $table->foreign('role_id')->references('id')->on('roles');
-                $table->foreign('nationalidtype')->references('id')->on('nat_id_types');
     
 
         });

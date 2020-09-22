@@ -28,7 +28,5 @@ class UserProfile extends Model
     public function role(){
         return $this->hasOne('App\Role');
     }  
-    public function nat_id_types(){
-        return $this->hasOne('App\Nat_ID_Type');
-    }  
+
 }

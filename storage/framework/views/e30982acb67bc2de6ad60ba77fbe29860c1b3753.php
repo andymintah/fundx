@@ -92,7 +92,7 @@ unset($__errorArgs, $__bag); ?>
                                     </a>
                                 <?php endif; ?>
                             </div>
-                        </div>
+                        </div> 
                     </form>
                 </div>
             </div>
