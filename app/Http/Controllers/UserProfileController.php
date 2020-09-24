@@ -24,7 +24,7 @@ class UserProfileController extends Controller
     
     public function create()
     {
-        return view ('userprofile.create');
+        return view ('profile.create');
 
     }
 

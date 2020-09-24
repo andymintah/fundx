@@ -1,4 +1,6 @@
-@extends('layouts.app')
+@extends('layouts.dashboard')
+
+@include('profile.dashboard')
 
 
 @section('content')
@@ -11,63 +13,33 @@
 <div class="row">
 
   <div class="col-md-12 col-lg-12 col-sm-12">
-  <form method="post" action="{{action('DonationController@store') }}" method="POST", enctype = "multipart/form-data">
+  <form method="post" action="{{action('UserProfileController@store') }}" method="POST", enctype = "multipart/form-data">
   {{ csrf_field() }}
   <input type="hidden" name="_method" value="post">
   
-  <div class="form-group">
-    <input class="form-control" id="donation-name"  name="name" required aria-describedby="donationname" placeholder="Donation Name" />
-    
+  <div class="form-row">
+  <div class="form-group col">
+    <input class="form-control" id="userprofile-firstname"  name="name" required aria-describedby="userprofilefirstname" placeholder="First Name" />
   </div>
-
-
-  <div class="form-group">
-    <textarea class="form-control autosize-target text-left"  id="donation-description" name="description"  placeholder="Description"></textarea>
+  <div class="form-group col">
+    <input class="form-control" id="userprofile-othername"  name="name" required aria-describedby="userprofileothername" placeholder="Other Name" />
+  </div>  <div class="form-group col">
+    <input class="form-control" id="userprofile-lastname"  name="name" required aria-describedby="userprofilelastname" placeholder="Last Name" />
   </div>
 
 
   <div class="form-row">
- 
- 
   <div class="form-group col">
-
-  <input class="form-control" id="datepicker" width="276" name="start-date" required aria-describedby="startdate" placeholder="Start Date"/>
-</div>
-
-<div class="form-group  col">
-
-  <input class="form-control" id="datepicker1" width="276" name="end-date" required aria-describedby="enddate"  placeholder="End Date"/>
-</div>
-
-       <!-- <div class="form-group col">
-
-            <input class="form-control" id="days"  name="days" required aria-describedby="enddate" placeholder="Days" />
-         </div>-->
-
-    </div>
-    <div class="form-group">
-
-<input class="form-control" id="items" name="items" required aria-describedby="items"  placeholder="Items"/>
-</div>
-
-<div class="form-group">
-
-<input class="form-control" id="address" name="address" required aria-describedby="address"  placeholder="Item Delivery Address"/>
-</div>
-<div class="form-row">
-
-        <div class="form-group col">
-    <input class="form-control"  id="amount"  name="amount"  required aria-describedby="amount"  placeholder="Target Amount" />
-        </div>
-
-        <div class="form-group col">
-          <select class="form-control " id="category" name="category" placeholder="Category">
-      <option selected>Donation Category</option>
-
-      <option>1</option>
-
-    </select>
+    <input class="form-control" id="userprofile-contactno1"  name="name" required aria-describedby="contactno1" placeholder="Contact No" />
   </div>
+  <div class="form-group col">
+    <input class="form-control" id="userprofile-contactno2"  name="name" required aria-describedby="contactno3" placeholder="Contact No" />
+  </div>  <div class="form-group col">
+    <input class="form-control" id="userprofile-contactno3"  name="name" required aria-describedby="contactno3" placeholder="Contact No" />
+  </div>
+
+
+
 
 
 
@@ -78,7 +50,7 @@
            </div>
       </div>
 
-</div>
+
 
 
 
@@ -99,13 +71,6 @@
 <div class="col-md-3 col-lg-3 col-sm-3 pull-right">
 
 
-          <div class="p-3">
-            <h4 class="font-italic">Actions</h4>
-            <ol class="list-unstyled">
-              <li><a href="/donation/">My donation</a></li>
-
-            </ol>
-          </div>
 
 
        

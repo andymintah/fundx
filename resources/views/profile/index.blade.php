@@ -1,6 +1,7 @@
 @extends('layouts.dashboard')
 
 @include('profile.dashboard')
+@section('content')
 
 <h4>Profile</h4>
 

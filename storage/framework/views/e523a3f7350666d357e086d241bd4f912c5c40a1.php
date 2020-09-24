@@ -42,12 +42,13 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="<?php echo e(route('logout')); ?>">
                   <span data-feather="bar-chart-2"></span>
-                  More
-                </a>
+                  <?php echo e(__('Logout')); ?>                </a>
               </li>
              
+
+
             </ul>
 
            
